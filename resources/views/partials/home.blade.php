@@ -30,7 +30,7 @@
                         <i ng-if="domain.closeExpiration" class="fa fa-warning status-unknown"></i>
                     </td>
                     <td>
-                        <a href="[[ '{{ route('domains.show', ['id' => null]) }}/'+ domain.id ]]"><button class="btn btn-xs btn-info"><i class="fa fa-eye"></i></button></a>
+                        <a href="/domain/[[ domain.id ]]"><button class="btn btn-xs btn-info"><i class="fa fa-eye"></i></button></a>
                         <a href="#domain-delete-[[ domain.id ]]" data-toggle="modal"><button class="btn btn-xs btn-danger"><i class="fa fa-close"></i></button></a>
                         @include('components.modals.domain-delete')
                         <a href="#domain-edit-[[ domain.id ]]" data-toggle="modal"><button class="btn btn-xs btn-info"><i class="fa fa-pencil"></i></button></a>
