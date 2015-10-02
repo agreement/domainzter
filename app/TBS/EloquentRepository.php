@@ -5,6 +5,7 @@ class EloquentRepository implements RepositoryInterface
 {
     /**
      * Get all models
+     * 
      * @return mixed
      */
     public function all()
@@ -25,6 +26,7 @@ class EloquentRepository implements RepositoryInterface
 
     /**
      * Delete model by id
+     * 
      * @param int $id
      * @return mixed
      */
