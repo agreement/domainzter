@@ -21,7 +21,7 @@ class CreateDomainsTable extends Migration
                 $table->string('url');
                 $table->text('notes')->nullable();
                 $table->timestamp('expiration')->nullable();
-                $table->timestamps();
+                $table->nullableTimestamps();
             }
         );
     }
