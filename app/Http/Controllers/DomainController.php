@@ -68,6 +68,10 @@ class DomainController extends Controller
         $domainId = $request->all()[0];
         $domain = $this->domainRepository->find($domainId);
 
+        if (!$domain) {
+            return response()->json([]);
+        }
+
         if ($domain->expiration) {
             $domain->expiration = strtotime($domain->expiration);
         }
@@ -147,8 +151,7 @@ class DomainController extends Controller
     {
         $this->validate($request, [
             'title' => 'required',
-            'url' => 'required|url',
-            'category_id' => ''
+            'url' => 'required|url'
         ]);
 
         $input = $request->all();
