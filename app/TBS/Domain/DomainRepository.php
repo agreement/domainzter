@@ -47,6 +47,10 @@ class DomainRepository extends EloquentRepository
             return false;
         }
 
+        if (array_key_exists('category_id', $input) && $input['category_id'] === '') {
+            unset($input['category_id']);
+        }
+
         $domain->update($input);
         $domain->save();
 
